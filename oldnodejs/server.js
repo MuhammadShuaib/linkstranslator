@@ -27,7 +27,7 @@ function server(req, res) {
 
     var from = (query.from || 'enwiki').toLowerCase().match(/[a-z_]{1,20}/)[0];
     if (from.indexOf("wiki") === -1) { from = from + 'wiki'; }
-    var to = (query.to || 'fawiki').toLowerCase().match(/[a-z_]{1,20}/)[0];
+    var to = (query.to || 'urwiki').toLowerCase().match(/[a-z_]{1,20}/)[0];
     if (to.indexOf("wiki") === -1) { to = to + 'wiki'; }
 
     var pages = [].concat(query.p || query['p[]'] || []);
