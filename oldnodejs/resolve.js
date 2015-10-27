@@ -15,7 +15,7 @@ function api(host, data) {
       path: '/w/api.php?' + querystring.stringify(data),
       method: 'GET',
       headers: {
-        'User-Agent': 'linkstranslator (github.com/ebraminio/linkstranslator)'
+        'User-Agent': 'linkstranslator (github.com/MuhammadShuaib/linkstranslator)'
       }
     }, function (response) {
       var result = [];
@@ -106,7 +106,7 @@ module.exports = getLocalLink;
 
 if (require.main === module) { // test and development
   var argv = require('minimist')(process.argv.slice(2));
-  getLocalLink(argv._, argv.from || 'enwiki', argv.to || 'fawiki').then(function (x) {
+  getLocalLink(argv._, argv.from || 'enwiki', argv.to || 'urwiki').then(function (x) {
     console.log(x);
   }, function (e) {
     console.log(e.stack);
