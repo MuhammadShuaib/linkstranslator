@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 $json = json_encode(translateLinks(
 	isset($_REQUEST['p']) ? (is_array($_REQUEST['p']) ? $_REQUEST['p'] : [$_REQUEST['p']]) : [],
 	isset($_REQUEST['from']) ? $_REQUEST['from'] : 'enwiki',
-	isset($_REQUEST['to']) ? $_REQUEST['to'] : 'fawiki'
+	isset($_REQUEST['to']) ? $_REQUEST['to'] : 'urwiki'
 ));
 echo $json !== '[]' ? $json : '{}';
 
@@ -230,7 +230,7 @@ function multiRequest($data, $options = array()) {
     curl_setopt($curly[$id], CURLOPT_URL,            $url);
     curl_setopt($curly[$id], CURLOPT_HEADER,         0);
     curl_setopt($curly[$id], CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($curly[$id], CURLOPT_USERAGENT,      'linkstranslator (github.com/ebraminio/linkstranslator)');
+    curl_setopt($curly[$id], CURLOPT_USERAGENT,      'linkstranslator (github.com/MuhammadShuaib/linkstranslator)');
 
  
     // post?
